@@ -46,10 +46,7 @@ app.UseEndpoints(endpoints =>
      name: "default",
      pattern: "{controller=ItemMenu}/{action=List}/{id?}");
 
-    //endpoints.MapControllerRoute(
-    //name: "menu",
-    //pattern: "{controller=Home}/{action=Index}/{id?}");
-
+   
 
 });
 

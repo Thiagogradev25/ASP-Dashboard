@@ -14,7 +14,7 @@ public class ItemMenuRepository : IItemMenuRepository
         _context = context;
     }
 
-    public IEnumerable<ItemMenu>? ItemsMenu => _context.ItemsMenu;
+    public IEnumerable<ItemMenu> ItemsMenu => _context.ItemsMenu;
 
  
 }

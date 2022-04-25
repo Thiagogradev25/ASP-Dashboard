@@ -7,13 +7,6 @@
     <RootNamespace>Asp_Dashboard_Server</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Views\**" />
-    <Content Remove="Views\**" />
-    <EmbeddedResource Remove="Views\**" />
-    <None Remove="Views\**" />
-  </ItemGroup>
-
 	<ItemGroup>
 		<Content Remove="wwwroot\css\style.css" />
 	</ItemGroup>

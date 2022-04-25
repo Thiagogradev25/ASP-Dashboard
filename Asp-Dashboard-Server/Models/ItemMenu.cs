@@ -65,12 +65,7 @@ public class ItemMenu
 
     [Column("OrdemRotina")]
     [Display(Name = "Ordem Rotina")]
-    public int? OredemRotina { get; set; }
-
-
-    //Mapear demais campos da View "viewGer_Menu"
-
-
+    public int? OrdemRotina { get; set; }
 
 
 }
