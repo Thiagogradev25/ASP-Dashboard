@@ -1,0 +1,47 @@
+﻿@using ASP_Dashboard.Repositories.Interfaces
+@model IEnumerable<ASP_Dashboard.Models.ItemMenuViewModel>
+
+
+
+
+<div id="layoutSidenav" class="mt-5">
+    <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-dark " id="sidenavAccordion">
+            <div class="sb-sidenav-menu">
+
+
+                @foreach (var item in Model.GroupBy(x => x.DescMenu))
+                {
+                    <div class="nav">
+                        <a class="nav-link" href="/ItemMenu/List">
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts-@item.First().Menuid" aria-expanded="false" aria-controls="collapseLayouts-@item.First().Menuid">
+                                
+                                @item.First().DescMenu
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                <div class="collapse" id="collapseLayouts-@item.First().Menuid" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        @foreach (var subitem in item.Where(x => x.Menuid == item.First().Menuid))
+                                        {
+
+                                            <a class="nav-link" asp-controller="ItemMenu" asp-action="Roteamento" asp-route-rota="@subitem.titulo"> @Html.DisplayFor(modelItem => subitem.titulo)</a>
+
+                                        }
+                                    </nav>
+
+                                </div>
+                            </a>
+                       </a>
+
+                    </div>
+                }
+
+            </div>
+
+            <div class="sb-sidenav-footer">
+                <div class="small">Logged in as:</div>
+                <a class="nav-link " style=color:white; href="#"> Admin</a>
+            </div>
+        </nav>
+    </div>
+</div>

@@ -58,7 +58,6 @@ public class HomeController : Controller
     {
         return View();
     }
-
     public IActionResult Documentos()
     {
         return View();
@@ -80,12 +79,6 @@ public class HomeController : Controller
     {
         return View();
     }
-
-
-
-
-
-
 
 
 

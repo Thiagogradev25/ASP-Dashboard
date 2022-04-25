@@ -1,0 +1,165 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title></title>
+    <link rel="stylesheet" href="~/css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+
+
+        .img-teste {
+            width: 40%;
+        }
+
+
+
+        .gradient {
+            /* background: url("/assets/img/bgt.jpg");*/
+
+            background-size: cover;
+            /* Gradient */
+            background: rgb(6,100,128);
+            background: -moz-linear-gradient(-90deg, rgba(6,100,128,1) 0%, rgba(3,55,83,1) 36%, rgba(1,32,48,1) 60%, rgba(2,15,31,1) 81%, rgba(0,6,13,1) 100%);
+            background: -webkit-linear-gradient(-90deg, rgba(6,100,128,1) 0%, rgba(3,55,83,1) 36%, rgba(1,32,48,1) 60%, rgba(2,15,31,1) 81%, rgba(0,6,13,1) 100%);
+            background: linear-gradient(-90deg, rgba(6,100,128,1) 0%, rgba(3,55,83,1) 36%, rgba(1,32,48,1) 60%, rgba(2,15,31,1) 81%, rgba(0,6,13,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#066480",endColorstr="#00060d",GradientType=1);
+        }
+
+        .box {
+            width: 100%;
+            object-fit: cover;
+            padding: 50px
+        }
+
+        .navbar3 {
+            background-color: #fff;
+            height: 8%;
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        .faixa {
+            background-color: #00b1e9;
+            height: 1%;
+        }
+
+        .footerx {
+            background-color: #011b2b;
+            width: 100%;
+            height: 5%;
+        }
+
+        .logo {
+            width: 7%;
+            height:auto;
+        }
+
+    </style>
+
+</head>
+<body class="gradient">
+        <nav class="navbar3 container-fluid d-flex p-2">
+            <div class="col d-flex flex-row text-start">
+                <a href="home/index"></a><img src="/assets/img/logo.jpg" class="logo img-fluid" />
+                <p class="mx-5" style="font-size:22px; margin-top:12px;">Asplan Sistemas</p>
+            </div>
+            <div class="col2 text-end d-flex  p-1">
+                <p style="font-size:22px; margin-top:12px;">Ligue: (11) 3305-6500</p>
+                <button class="btn-dark "
+                        style="border-radius:13px;background-color:#00b1e9;height:47px;margin-left:10px;border:none;font-weight:500;font-size:20px;  ">
+                    fale conosco
+                </button>
+            </div>
+        </nav>
+
+   
+
+
+
+    <nav class="faixa d-flex flex-row align-text-end ">
+
+    </nav>
+
+    <section class=" bg-opacity-20 " style="margin-top:5%;">
+
+        <div class="box container-fluid mt-4">
+            <div class="container-fluid h-custom mb-3">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-md-9 col-lg-6 col-xl-6">
+                        <img src="/assets/img/logo.png" class="img-teste " alt="Logo Asplan Image">
+                        <h2 style="color: white;margin-right:10px;margin-top: 40px;font-size: 25px;margin-left:-15px;">Agilidade e controle para sua empresa</h2>
+                    </div>
+                    <div class="col-md-8 col-lg-6 col-xl-3 align-content-center mb-3">
+                        <form>
+                            <div class="divider d-flex  my-4" style="color:white;">
+
+                                <h2 class="text-start fw-bold mr-2 fs-2 mb-0">Portal 360</h2>
+                            </div>
+                            <div class="divider d-flex  my-4" style="color:white;">
+
+                                <h3 class="text-start fw-bold mr-2 fs-2 mb-0">Seja bem-vido</h3>
+                            </div>
+                            <!-- Email input -->
+                            <div class="form-outline mb-3 " style="color:white;width:85%;">
+                                <label class="form-label " for="usuario">Usuário</label>
+                                <input type="email" id="usuario" class="form-control form-control-lg" autocomplete="on" placeholder="" />
+                            </div>
+                            <!-- Password input -->
+                            <div class="form-outline mb-3 " style="color:white;width:85%;">
+                                <label class="form-label " for="password">Senha</label>
+                                <input type="password" id="password" class="form-control form-control-lg" autocomplete="on" placeholder="" />
+                            </div>
+                            @* <div class="d-flex justify-content-between align-items-center">
+                                <a href="#!" class="text-body">Forgot password?</a>
+                                </div>*@
+                            <div class=" text-start mt-4 pt-2">
+                                <button type="button" class="btn  btn-lg btn-teste "
+                                        style="padding-left: 2.5rem; padding-right: 2.5rem;border-radius: 15px;">
+                                    Entrar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class=" footerx fixed-bottom pt-2 ">
+        <div class="row">
+            <div class="col text-center">
+                <small style="color:white">© Copyright 2022 Asplan Sistemas - Soluções inteligentes na gestão de informação para sua empresa.  </small>
+            </div>
+            <div class="col text-end">
+                <a class="p-2"><i class="fa-brands  fa-inverse fa-facebook-square"></i><img href="#!"></a>
+                <a class="p-2"><i class="fa-brands  fa-inverse fa-instagram"></i><img href="#!"></a>
+                <a class="p-2"><i class="fa-brands fa-inverse fa-linkedin"></i><img href="#!"></a>
+                <a class="p-2"><i class="fa-brands fa-inverse fa-youtube"></i><img href="#!"></a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="~/js/scripts.js"></script>
+    <script src="~/js/popper.js"></script>
+    <script src="~/js/main.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+</body>
+</html>
+
+

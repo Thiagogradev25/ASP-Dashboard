@@ -2,18 +2,17 @@
 using ASP_Dashboard.Models;
 using ASP_Dashboard.Repositories.Interfaces;
 
-namespace ASP_Dashboard.Repositories
+namespace ASP_Dashboard.Repositories;
+
+public class ItemMenuRepository : IItemMenuRepository
+
 {
-    public class ItemMenuRepository : IItemMenuRepository
+    private readonly AppDbContext _context;
 
+    public ItemMenuRepository(AppDbContext context)
     {
-        private readonly AppDbContext _context;
-
-        public ItemMenuRepository(AppDbContext context)
-        {
-            _context = context;
-        }
-
-        public IEnumerable<ItemMenu> ItemsMenu => _context.ItemsMenu;
+        _context = context;
     }
+
+    public IEnumerable<ItemMenuViewModel> ItemsMenu => _context.ItemsMenu;
 }

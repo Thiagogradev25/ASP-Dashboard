@@ -1,17 +1,26 @@
 using ASP_Dashboard.Context;
+using ASP_Dashboard.Repositories;
+using ASP_Dashboard.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-var builder = WebApplication.CreateBuilder(args); 
+
+var builder = WebApplication.CreateBuilder(args);
+//builder.Configuration.GetConnectionString("DefaultConnection");
 
 // Add services to the container.
+
+builder.Services.AddDbContextFactory<AppDbContext>(options =>
+   options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddTransient<IItemMenuRepository, ItemMenuRepository>();
+
+builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
-IServiceCollection serviceCollection = builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer("DefaultConnection"));//Testar
 
-//builder.Services.AddTransient<ILancheRepository, LancheRepository>();
-//builder.Services.AddTransient<ICategoriaRepository, CategoriaRepository>();
 
+
+ 
 var app = builder.Build();
-
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -20,6 +29,8 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -27,8 +38,19 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.UseEndpoints(endpoints =>
+{
+
+endpoints.MapControllerRoute(
+ name: "default",
+ pattern: "{controller=ItemMenu}/{action=List}/{id?}");
+
+//endpoints.MapControllerRoute(
+//name: "menu",
+//pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
+});
+
 
 app.Run();

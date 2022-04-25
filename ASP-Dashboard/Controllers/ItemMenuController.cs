@@ -6,7 +6,7 @@ namespace ASP_Dashboard.Controllers
     public class ItemMenuController : Controller
     {
 
-   
+
         private readonly IItemMenuRepository _ItemMenuRepository;
 
         public ItemMenuController(IItemMenuRepository itemMenuRepository)
@@ -20,6 +20,15 @@ namespace ASP_Dashboard.Controllers
             return View(ItemsMenu);
         }
 
+        public IActionResult Roteamento(string rota)
+        {
+            return View(rota);
+        }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
 
 
     }
