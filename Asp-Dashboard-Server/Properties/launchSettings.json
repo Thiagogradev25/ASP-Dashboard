@@ -12,8 +12,7 @@
     "Asp_Dashboard_Server": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": true,
-      "launchUrl": "weatherforecast",
+      "launchBrowser": true,     
       "applicationUrl": "https://localhost:7105;http://localhost:5105",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

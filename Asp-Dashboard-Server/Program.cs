@@ -1,11 +1,12 @@
-using ASP_Dashboard.Context;
-using ASP_Dashboard.Repositories;
-using ASP_Dashboard.Repositories.Interfaces;
+
+using ASP_Dashboard_Server.Context;
+using ASP_Dashboard_Server.Repositories;
+using ASP_Dashboard_Server.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
-//builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Configuration.GetConnectionString("DefaultConnection");
 
 // Add services to the container.
 
@@ -24,8 +25,8 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    //app.UseExceptionHandler("/Home/Error");
+    //// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 

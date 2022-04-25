@@ -1,5 +1,5 @@
-﻿@using ASP_Dashboard.Repositories.Interfaces
-@model IEnumerable<ASP_Dashboard.Models.ItemMenuViewModel>
+﻿@using ASP_Dashboard_Server.Repositories.Interfaces
+@model IEnumerable<ASP_Dashboard_Server.Models.ItemMenu>
 
 
 
@@ -13,25 +13,25 @@
                 @foreach (var item in Model.GroupBy(x => x.DescMenu))
                 {
                     <div class="nav">
-                        <a class="nav-link" href="/ItemMenu/List">
+                         <a class="nav-link" href="/ItemMenu/List">
 
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts-@item.First().Menuid" aria-expanded="false" aria-controls="collapseLayouts-@item.First().Menuid">
-                                
-                                @item.First().DescMenu
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                <div class="collapse" id="collapseLayouts-@item.First().Menuid" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                    <nav class="sb-sidenav-menu-nested nav">
-                                        @foreach (var subitem in item.Where(x => x.Menuid == item.First().Menuid))
-                                        {
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts-@item.First().Menuid" aria-expanded="false" aria-controls="collapseLayouts-@item.First().Menuid">
 
-                                            <a class="nav-link" asp-controller="ItemMenu" asp-action="Roteamento" asp-route-rota="@subitem.titulo"> @Html.DisplayFor(modelItem => subitem.titulo)</a>
+                            @item.First().DescMenu
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            <div class="collapse" id="collapseLayouts-@item.First().Menuid" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    @foreach (var subitem in item.Where(x => x.Menuid == item.First().Menuid))
+                                    {
 
-                                        }
-                                    </nav>
+                                        <a class="nav-link" asp-controller="ItemMenu" asp-action="Roteamento" asp-route-rota="@subitem.titulo"> @Html.DisplayFor(modelItem => subitem.titulo)</a>
 
-                                </div>
-                            </a>
-                       </a>
+                                    }
+                                </nav>
+
+                            </div>
+                        </a>
+                        </a>
 
                     </div>
                 }

@@ -1,8 +1,8 @@
-﻿using ASP_Dashboard.Models;
+﻿using ASP_Dashboard_Server.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace ASP_Dashboard.Controllers;
+namespace ASP_Dashboard_Server.Controllers;
 
 public class HomeController : Controller
 {
@@ -82,9 +82,5 @@ public class HomeController : Controller
 
 
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-    }
+    
 }

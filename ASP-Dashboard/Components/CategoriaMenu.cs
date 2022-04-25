@@ -1,4 +1,4 @@
-﻿using ASP_Dashboard.Repositories.Interfaces;
+﻿using ASP_Dashboard_Server.Repositories.Interfaces;
 
 using Microsoft.AspNetCore.Mvc;
 

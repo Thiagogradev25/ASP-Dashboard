@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ASP_Dashboard.Models;
+namespace ASP_Dashboard_Server.Models;
 
 
 [Table("viewGer_Menu")]

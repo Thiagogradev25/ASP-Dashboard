@@ -1,12 +1,10 @@
-﻿
-
-using ASP_Dashboard.Models;
+﻿using ASP_Dashboard_Server.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace ASP_Dashboard.Context;
+namespace ASP_Dashboard_Server.Context;
 
-    public class AppDbContext : DbContext
-    {
+public class AppDbContext : DbContext
+{
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseSqlServer(
@@ -14,8 +12,8 @@ namespace ASP_Dashboard.Context;
     }
 
 
-    public DbSet<ItemMenuViewModel>? ItemsMenu { get; set; }
+    public DbSet<ItemMenu> ItemsMenu { get; set; }
 
- 
-    }
+
+}
 

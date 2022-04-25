@@ -1,8 +1,8 @@
-﻿using ASP_Dashboard.Models;
+﻿using ASP_Dashboard_Server.Models;
 
-namespace ASP_Dashboard.Repositories.Interfaces;
+namespace ASP_Dashboard_Server.Repositories.Interfaces;
 
 public interface IItemMenuRepository
 {
-    IEnumerable<ItemMenuViewModel> ItemsMenu { get; }
+    IEnumerable<ItemMenu> ItemsMenu { get; }
 }

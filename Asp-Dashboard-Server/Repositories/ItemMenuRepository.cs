@@ -1,8 +1,8 @@
-﻿using ASP_Dashboard.Context;
-using ASP_Dashboard.Models;
-using ASP_Dashboard.Repositories.Interfaces;
+﻿using ASP_Dashboard_Server.Context;
+using ASP_Dashboard_Server.Models;
+using ASP_Dashboard_Server.Repositories.Interfaces;
 
-namespace ASP_Dashboard.Repositories;
+namespace ASP_Dashboard_Server.Repositories;
 
 public class ItemMenuRepository : IItemMenuRepository
 
@@ -14,5 +14,7 @@ public class ItemMenuRepository : IItemMenuRepository
         _context = context;
     }
 
-    public IEnumerable<ItemMenuViewModel> ItemsMenu => _context.ItemsMenu;
+    public IEnumerable<ItemMenu>? ItemsMenu => _context.ItemsMenu;
+
+ 
 }
