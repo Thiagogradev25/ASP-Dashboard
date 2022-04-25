@@ -33,7 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\Asp-Dashboard-Server\Asp-Dashboard-Server.csproj" />
   </ItemGroup>
 
 </Project>
