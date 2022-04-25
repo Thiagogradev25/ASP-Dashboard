@@ -1,6 +1,7 @@
 ﻿using ASP_Dashboard_Server.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace ASP_Dashboard_Server.Controllers
 {
     public class ItemMenuController : Controller
@@ -17,7 +18,7 @@ namespace ASP_Dashboard_Server.Controllers
         public IActionResult List()
         {
             var ItemsMenu = _ItemMenuRepository.ItemsMenu;
-            return View(ItemsMenu);
+            return View();
         }
 
         public IActionResult Roteamento(string rota)
